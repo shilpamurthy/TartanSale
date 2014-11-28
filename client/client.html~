@@ -1,0 +1,42 @@
+<head>
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="less.js" type="text/javascript"></script>
+  <title>Chat app</title>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <a class="brand" href="#">ChatApp</a>
+      {{> loginButtons align="right"}}
+    </div>
+    </div>
+  <h1>Chatapp</h1>
+  <div class="row">
+    <div class ="col-lg-4">
+      {{>welcome}}
+      </div>
+    <div class ="col-lg-4">
+      {{>input}}
+      </div>
+    <div class ="col-lg-4">
+      {{>messages}}
+      </div>
+    </div>
+</body>
+
+<template name="welcome">
+  <p>
+    Welcome to the example chat app! Please log in to show your username and messages.
+    </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+  <strong>{{name}}:</strong> {{message}} time is = {{time}}<br>
+  {{/each}}
+</template>
+
+<template name= "input">
+  <p> Message: <input type="text" id="message"></p>
+</template>

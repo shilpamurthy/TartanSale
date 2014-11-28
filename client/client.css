@@ -1,0 +1,332 @@
+html {
+     padding: 10px;
+     font-weight: 200;
+     font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2{
+  font-weight: 100;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#jmsg{
+  font-weight: 100;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 150%;
+}
+
+#accept {
+   border-top: 1px solid #090d0f;
+   background: #3ff56a;
+   background: -webkit-gradient(linear, left top, left bottom, from(#4ab50d), to(#3ff56a));
+   background: -webkit-linear-gradient(top, #4ab50d, #3ff56a);
+   background: -moz-linear-gradient(top, #4ab50d, #3ff56a);
+   background: -ms-linear-gradient(top, #4ab50d, #3ff56a);
+   background: -o-linear-gradient(top, #4ab50d, #3ff56a);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 11px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#accept:hover {
+   border-top-color: #74b50b;
+   background: #74b50b;
+   color: #ccc;
+   }
+#accept:active {
+   border-top-color: #64de1d;
+   background: #64de1d;
+   }
+
+#reject {
+   border-top: 1px solid #090d0f;
+   background: #f53f3f;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e8125d), to(#f53f3f));
+   background: -webkit-linear-gradient(top, #e8125d, #f53f3f);
+   background: -moz-linear-gradient(top, #e8125d, #f53f3f);
+   background: -ms-linear-gradient(top, #e8125d, #f53f3f);
+   background: -o-linear-gradient(top, #e8125d, #f53f3f);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 11px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#reject:hover {
+   border-top-color: #d90f7b;
+   background: #d90f7b;
+   color: #ccc;
+   }
+#reject:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#done {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 11px 22px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#done:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+#done:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+#from{
+  text-align: center;
+  height: 30px;
+  border: 2px solid;
+ font-weight: 150;
+  font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+#pdes{
+  padding-left:10px;
+  background-color: #303030;
+  color: #fff;
+  width: 270px;
+  padding-top: 5px;
+}
+
+button{
+  background-color: #303030;
+}
+
+#pdes1{
+  text-align: center;
+  width: 250px;
+  padding-left: 10px;
+}
+#uploadB{
+  width: 145px;
+  background-color: #454545;
+  color: #fff;
+}
+
+#uploadForm{
+
+  padding-left: 250px;
+}
+
+#uploadForm2{
+
+  padding-left: 40px;
+}
+
+.login-buttons-dropdown-align-right {
+				    padding-top: 15px;
+				    float: right;
+}
+
+.navbar-fixed-top {
+		  background-color: #000;
+		  font-color: #000;
+		  font-weight: 200;
+}
+
+.navbar-inverse .brand	{
+	color: #ffffff;
+	font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 80px;
+}
+
+#login-buttons {
+	       color: #fff;
+	       padding-top: 13px;
+	       padding-right: 5px;
+}
+
+.container{
+	padding-left: 100px;
+}
+
+.brand, .navbar-inverse .nav > li > a{
+	color: #fff;
+}
+
+.navbar .nav	{
+	font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 100;
+	letter-spacing: 1.2px;
+}
+
+.jumbotron h1{
+	font-width:200;
+  text-align: center;
+}
+
+.jumbotron p{
+  font-width:200;
+  text-align: center;
+}
+
+.container-fluid .row .col-md-3 .thumbnail {
+  width: 250px;
+  height: 350px;
+}
+
+h1{
+	font-width: 200;
+}
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar-header .navbar-brand{
+  color: #D5BDE8;
+  font: lucida console;
+}
+
+.navbar-collapse .navbar-nav > li > a{
+  color: #D5BDE8;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  color: #7C3DAF;
+  border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+  display: none;
+  color: #000;
+  font-size: 15px;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+    width: 150px;
+  }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+  color: #fff;
+  background-color: #000;
+}
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+.page-header{
+  margin-left: 575px;
+}
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}

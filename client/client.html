@@ -1,0 +1,169 @@
+<head>
+  <link rel="stylesheet/less" type="text/css" href="styles.less" />
+  <script src="less.js" type="text/javascript"></script>
+  <title>Tartan Sale</title>
+</head>
+
+
+<template name="layout">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <a class="brand" href="#">Tartan Sale</a>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Dashboard.html">MarketPlace</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="NewFile.html">My Market</a></li>
+      </ul>
+      {{> loginButtons align="right"}}
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+      	{{> sidebar}}
+      </div>
+      <div class="col-md-9">
+      	{{>yield}}
+      </div>
+    </div>
+  </div>
+</template>
+
+
+<template name="home">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Tartan Sale </h1>
+      {{>welcome}}
+    </div>
+  </div>
+</template>
+
+<template name="welcome">
+  <p>
+    Welcome to Tartan Sale {{name}}
+    </p>
+</template>
+
+<template name="messages">
+  {{#each messages}}
+  <div class="container-fluid well" id="msgDiv">
+    <div class="row">
+      <div class="col-md-3" id="from">
+        From: {{name}} 
+      </div>
+      <div class="col-md-5" id="msg">
+        {{message}}
+      </div>
+      <form id="accept_{{_id}}_{{buyer}}" value="accept">
+        <p hidden id="p1_accept_{{_id}}_{{buyer}}"> {{buyer}} </p> 
+        <p hidden id="p2_accept_{{_id}}_{{buyer}}"> accepted </p> 
+        <p hidden id="p3_accept_{{_id}}_{{buyer}}"> {{description}} </p> 
+        <p hidden id="p4_accept_{{_id}}_{{buyer}}">{{_id}}</p> 
+        <div class="col-md-2">
+          <button type="submit" id="accept"> ACCEPT </button>
+        </div>
+      </form>
+      <form id="reject_{{_id}}_{{buyer}}" value="reject">
+        <p hidden id="p1_reject_{{_id}}_{{buyer}}"> {{buyer}} </p> 
+        <p hidden id="p2_reject_{{_id}}_{{buyer}}"> rejected </p> 
+        <p hidden id="p3_reject_{{_id}}_{{buyer}}"> {{description}} </p> 
+        <p hidden id="p4_reject_{{_id}}_{{buyer}}">{{_id}}</p> 
+        <div class="col-md-2">
+          <button type="submit" id="reject"> REJECT </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {{/each}}
+</template>
+
+<template name= "homeMessages">
+  {{#each messages}}
+  <div class="container-fluid well">
+    <div class="row">
+      <div class="col-md-9">
+        <p id="jmsg"> Your request for {{description}} has been {{message}}</p>
+      </div>
+      <div class="col=md-3">
+        <form id="{{_id}}">
+          <button type="submit" id="done">DONE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</template>
+
+<template name="mymarketplace">
+  <div class="container-fluid">
+    <div class ="row">
+        {{#each images}}
+          <div class="col-md-3">
+            <img class="thumbnail" src="{{src}}"/>
+          </div>
+        {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="marketplace">
+   <div class="container-fluid">
+    <div class ="row">
+        {{#each images}}
+          <div class="col-md-3">
+            <div class="container" id="pdes">
+              <img class="thumbnail" src="{{src}}"/>
+              <div class="container" id="pdes1">
+                <p> Price: {{price}} </p>
+                <p> {{description}} </p>
+                <p hidden id="UID"> {{user}} </p>
+                <form id="{{user}}_{{_id}}" value="{{description}}">
+                  <p hidden id="p_{{user}}_{{_id}}">{{user}}</p>
+                  <button type="submit" id="but_{{user}}_{{_id}}" value="wants to buy {{description}} for {{price}}">Buy</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="sidebar">
+  <div class="sisdebar-nav well">
+    <ul class="nav nav-sidebar">
+      <li><a href="{{pathFor 'homeMessages'}}">Home</a></li>
+      <li class="{{activeIfTemplateIs 'home'}}"><a href="{{pathFor 'home'}}">Dashboard</a></li>
+      <li><a href="{{pathFor 'upload'}}">Upload</a></li>
+      <li><a href="{{pathFor 'marketplace'}}">Market Place</a></li>
+      <li><a href="{{pathFor 'mymarketplace'}}">My Market Place</a></li>
+      <li class="{{activeIfTemplateIs 'messages'}}"><a href="{{pathFor 'messages'}}">Messages</a></li>
+    </ul>
+  </div>
+</template>
+
+
+<template name="upload">
+  <div class="container-fluid">
+    <form>
+      <div class="container-fluid" id="uploadForm">
+        <h2> Upload your product </h2>
+          <div class="container-fluid" id="uploadForm2">
+            <input id="fileinput" type="file"/>
+            <br>
+            <input id="description" type="text" placeholder="description"/>
+            <br>
+            <input id="price" type="text" placeholder="price"/>
+            <br>
+            <button type="submit" id="uploadB">Upload</button>
+          </div>
+      </div>
+    </form>
+  </div>
+</template>
+
+
+
+
